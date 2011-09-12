@@ -31,5 +31,14 @@ int main(int argc, char *argv[]) {
     assert(result[2].yomi == L"なまえ");
     assert(result[2].word == L"名前");
   }
+
+  {
+    vector<Converter::Node> result;
+    wstring input = L"unknown";
+    result = converter.convert(input, false);
+    cout << result.size() << endl;
+    assert(result.size() == 0);
+  }
+  
   return 0;
 }

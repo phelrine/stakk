@@ -106,6 +106,9 @@ class Converter {
       while(lattice[current].size() == 0 && current > 0) {
         current--;
       }
+      if (current == 0) {
+        break;
+      }
       Node &node = lattice[current][position];
       nodes.insert(nodes.begin(), node);
       position = node.back;
