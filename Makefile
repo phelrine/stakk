@@ -18,6 +18,8 @@ test:
 	test/trie_test.out
 	$(CC) $(CCFLAGS) test/converter_test.cc -o test/converter_test.out
 	test/converter_test.out
+	$(CC) $(CCFLAGS) test/converter_skip_unknown_test.cc -o test/converter_skip_unknown_test.out
+	test/converter_skip_unknown_test.out
 	$(CC) $(CCFLAGS) test/stakk_test.cc -o test/stakk_test.out
 	test/stakk_test.out
 	$(CC) $(CCFLAGS) test/connection_test.cc -o test/connection_test.out

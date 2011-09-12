@@ -102,7 +102,10 @@ class Converter {
     vector<Node> nodes;
     int current = lattice.size()-2;
     int position = lattice[lattice.size()-1][0].back;
-    while (current > 0 && lattice[current].size() > 0) {
+    while (current > 0) {
+      while(lattice[current].size() == 0 && current > 0) {
+        current--;
+      }
       Node &node = lattice[current][position];
       nodes.insert(nodes.begin(), node);
       position = node.back;
